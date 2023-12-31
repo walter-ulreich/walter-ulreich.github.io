@@ -72,8 +72,8 @@ a {
 
 .profile-img {
     position: relative;
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     background-image: url('images/profile.jpg');
     background-size: cover;
@@ -87,7 +87,6 @@ a {
 
 .section-heading {
     text-align: center;
-    font-size: 1.75rem;
     position: relative;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -118,7 +117,6 @@ a {
     background-image: url('images/lighthouse.jpg'); 
     background-size: cover;
     background-position: center center;
-    min-height: 600px;
     position: relative;
 
     .container {
@@ -140,11 +138,12 @@ a {
 .header-top {
     padding: 1rem 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .header-main {
-    margin: 4rem auto;
+    margin: 2rem auto;
     text-align: center;
 
     * {
@@ -153,15 +152,24 @@ a {
 }
 
 .header-main__title {
-    font-size: 2.25rem;
     border: 4px solid $color-white;
     padding: 1rem;
     max-width: 720px;
     margin: 0 auto 1.25rem auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+}
+
+.header-main__line {
+    width: 30px;
+    height: 2px;
+    background: $color-white;
+    display: block;
+    margin: 8px auto 4px auto;
 }
 
 .header-main__text {
-    font-size: 1.125rem;
     font-weight: 300;
     max-width: 720px;
     margin: 0 auto 1rem auto;
@@ -174,6 +182,7 @@ a {
 }
 
 .nav__link {
+    font-size: .875rem;
     margin-left: 1rem;
     color: $color-white;
 }
@@ -192,7 +201,6 @@ a {
 
 .contact__title {
     display: block;
-    font-size: 1.25rem;
 }
 
 /**** Skils ****/
@@ -202,6 +210,7 @@ a {
 
 .skills-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 720px;
     margin: 0 auto;
@@ -250,34 +259,22 @@ a {
 }
 
 .swiper-slide {
-    min-height: 460px;
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
-
-    &:after {
-        content: '';
-        display: block;
-        width: 400px;
-        height: 200%;
-        position: absolute;
-        top: 50%;
-        left: 40px;
-        transform: translateY(-50%) rotate(-15deg);
-        background: $color-secondary;
-    }
 }
 
 .swiper-slide__content {
-    width: 25%;
     background: $color-secondary;
-    padding-left: 4rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     position: relative;
     z-index: 1;
+    order: 2;
     
     * {
         color: $color-white;
@@ -285,7 +282,7 @@ a {
 }
 
 .swiper-slide__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: .5rem;
 }
 
@@ -322,10 +319,11 @@ a {
 
 .swiper-slide__media {
     position: relative;
-    width: 75%;
+    height: 220px;
     
     img {
         height: 100%;
+        width: 100%;
         object-fit: fill;
     }
 
@@ -343,6 +341,7 @@ a {
 
 .swiper-button-prev,
 .swiper-button-next {
+    display: none;
     color: $color-secondary;
 
     &:after {
@@ -358,16 +357,109 @@ a {
     left: 60px;
 }
 
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
 .swiper-pagination-bullet-active {
     background: $color-secondary;
 }
 
 /**** Media Queries ****/
 @media(min-width: 48em) {
+    .header {
+        min-height: 600px;
+    }
+
+    .profile-img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+    }
+
+    .header-main {
+        margin: 4rem auto;
+    }
+
+    .header-main__title {
+        font-size: 2.25rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-main__line {
+        width: 2px;
+        height: 30px;
+        margin: 0 1rem;
+    }
+
+    .header-main__text {
+        font-size: 1.125rem;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .swiper-slide__title {
+        font-size: 1.75rem;
+    }
+
+    .swiper-slide__media {
+        height: 300px;
+    }
+
     .skills-list__item {
         .icon {
             width: 5rem;
             height: 5rem;
         }
+    }
+
+    .contact__title {
+        font-size: 1.25rem;
+    }
+}
+
+@media(min-width: 72em) {
+    .swiper-slide {
+        min-height: 460px;
+        flex-direction: row;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 400px;
+            height: 200%;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%) rotate(-15deg);
+            background: $color-secondary;
+            z-index: 1;
+        }
+    }
+
+    .swiper-slide__content {
+        order: 1;
+        width: 25%;
+        padding: 0 0 0 4rem;
+    }
+
+    .swiper-slide__media {
+        order: 2;
+        width: 75%;
+        height: auto;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
     }
 }
