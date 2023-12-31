@@ -75,7 +75,7 @@ a {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background-image: url('profile.jpg');
+    background-image: url('images/profile.jpg');
     background-size: cover;
     border: 1px solid $color-white;
     background-position: 50%;
@@ -115,7 +115,7 @@ a {
 
 /*** Header ****/ 
 .header {
-    background-image: url('https://images.pexels.com/photos/19086902/pexels-photo-19086902/free-photo-of-lighthouse-on-cape-elizabeth-maine.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('images/lighthouse.jpg'); 
     background-size: cover;
     background-position: center center;
     min-height: 600px;
