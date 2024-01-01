@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -12,7 +12,6 @@ html, body {
 * {
   color: #333;
   letter-spacing: 1px;
-  font-family: "Inter", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -146,7 +145,16 @@ a:hover, a:focus {
   margin: 0 auto 1.25rem auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.75rem;
+  font-family: "Roboto Slab", serif;
+}
+.header-main__title .icon {
+  fill: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 8px;
 }
 
 .header-main__line {
@@ -235,6 +243,7 @@ a:hover, a:focus {
 .footer p {
   margin: 0;
   color: #fff;
+  font-size: 0.875rem;
 }
 
 /**** Swiper Slider ****/
@@ -252,7 +261,7 @@ a:hover, a:focus {
 
 .swiper-slide__content {
   background: #382491;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,7 +309,7 @@ a:hover, a:focus {
 
 .swiper-slide__media {
   position: relative;
-  height: 220px;
+  height: 180px;
 }
 .swiper-slide__media img {
   height: 100%;
@@ -364,8 +373,10 @@ a:hover, a:focus {
   .header-main__title {
     font-size: 2.25rem;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  }
+  .header-main__title .icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .header-main__line {
     width: 2px;
@@ -380,6 +391,9 @@ a:hover, a:focus {
   }
   .swiper-slide__title {
     font-size: 1.75rem;
+  }
+  .swiper-slide__content {
+    padding: 2rem;
   }
   .swiper-slide__media {
     height: 300px;
@@ -411,12 +425,12 @@ a:hover, a:focus {
   }
   .swiper-slide__content {
     order: 1;
-    width: 25%;
+    width: 30%;
     padding: 0 0 0 4rem;
   }
   .swiper-slide__media {
     order: 2;
-    width: 75%;
+    width: 70%;
     height: auto;
   }
   .swiper-button-prev,
