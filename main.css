@@ -171,6 +171,13 @@ a:hover, a:focus {
   margin: 0 auto 1rem auto;
   line-height: 1.5rem;
 }
+.header-main__text a {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+.header-main__text a:hover, .header-main__text a:focus {
+  color: #382491;
+}
 
 .nav {
   list-style: none;
@@ -184,14 +191,25 @@ a:hover, a:focus {
 }
 
 /*** Contact ****/
+.contact__container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 .contact__item {
   text-align: center;
   padding: 1rem 0;
 }
 .contact__item .icon {
-  fill: #333;
+  fill: #382491;
   width: 2.5rem;
   height: 2.5rem;
+}
+.contact__item a {
+  transition: all 0.3s;
+}
+.contact__item a:hover, .contact__item a:focus {
+  color: #382491;
 }
 
 .contact__title {
@@ -280,7 +298,8 @@ a:hover, a:focus {
 }
 
 .swiper-slide__text {
-  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .swiper-slide__link {
@@ -290,9 +309,15 @@ a:hover, a:focus {
   font-size: 14px;
   font-weight: 600;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  transition: all 0.3s;
 }
 .swiper-slide__link:hover, .swiper-slide__link:focus {
   text-decoration: none;
+  background: #333;
+  color: #fff;
+}
+.swiper-slide__link:hover:after, .swiper-slide__link:focus:after {
+  border-color: #fff;
 }
 .swiper-slide__link:after {
   content: "";
@@ -300,7 +325,7 @@ a:hover, a:focus {
   position: absolute;
   top: 50%;
   transform: translateY(-45%) rotate(-45deg);
-  right: 0.75rem;
+  right: 0.7rem;
   width: 7px;
   height: 7px;
   border-right: 2px solid #382491;
@@ -392,6 +417,9 @@ a:hover, a:focus {
   .swiper-slide__title {
     font-size: 1.75rem;
   }
+  .swiper-slide__text {
+    font-size: 1rem;
+  }
   .swiper-slide__content {
     padding: 2rem;
   }
@@ -404,6 +432,17 @@ a:hover, a:focus {
   }
   .contact__title {
     font-size: 1.25rem;
+  }
+  .contact__container {
+    display: flex;
+    justify-content: center;
+  }
+  .contact__item {
+    width: 33.3333%;
+    margin: 2rem 0;
+  }
+  .contact__item .icon {
+    margin-bottom: 0.5rem;
   }
 }
 @media (min-width: 72em) {
