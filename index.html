@@ -15,17 +15,25 @@
         <div class="container">
             <section class="header-top">
                 <div class="profile-img"></div>
-                <ul class="nav">
-                    <li class="nav__item">
-                        <a href="#work" class="nav__link">Work</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">Skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
-                </ul>
+                <button type="button" class="nav-toggle">
+                    <span class="visually-hidden">Toggle Navigation Menu</span>
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                </button>
+                <div class="nav-container">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="#work" class="nav__link">Work</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="header-main">
                 <h1 class="header-main__title">
@@ -49,6 +57,16 @@
             <div class="container">
                 <div class="swiper">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__content">
+                                <h3 class="swiper-slide__title">ROC Commerce</h3>
+                                <p class="swiper-slide__text">As a developer at Americaneagle.com, I was asked to assist in the implementation of the ROC Commerce blog using the Sitefinity CMS.</p>
+                                <a href="https://www.roccommerce.com/resources/blog" class="swiper-slide__link" target="_blank">Visit roccommerce.com</a>
+                            </div>
+                            <div class="swiper-slide__media">
+                                <img src="images/roccommerce.png" alt="">
+                            </div>
+                        </div>
                         <div class="swiper-slide">
                             <div class="swiper-slide__content">
                                 <h3 class="swiper-slide__title">Red Gold Tomatoes</h3>
