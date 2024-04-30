@@ -458,7 +458,7 @@ a:hover, a:focus {
     height: 8rem;
   }
   .nav-container {
-    width: 460px;
+    width: 35vw;
   }
   .nav__item {
     text-align: left;
