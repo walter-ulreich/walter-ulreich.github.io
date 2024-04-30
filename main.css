@@ -133,7 +133,7 @@ a:hover, a:focus {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .header-top {
@@ -166,6 +166,7 @@ a:hover, a:focus {
   align-items: center;
   font-size: 1.75rem;
   font-family: "Roboto Slab", serif;
+  position: relative;
 }
 .header-main__title .icon {
   fill: #fff;
@@ -186,14 +187,14 @@ a:hover, a:focus {
   font-weight: 300;
   max-width: 720px;
   margin: 0 auto 1rem auto;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
 }
 .header-main__text a {
-  text-decoration: underline;
   transition: all 0.3s;
+  color: #aefcf9;
 }
 .header-main__text a:hover, .header-main__text a:focus {
-  color: #382491;
+  text-decoration: underline;
 }
 
 .nav-toggle {
@@ -301,10 +302,19 @@ a:hover, a:focus {
   width: 23%;
   margin: 1rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .skills-list__item .icon {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.skills-list__title {
+  color: #fff;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
 }
 
 .icon-html {
@@ -503,6 +513,9 @@ a:hover, a:focus {
   .skills-list__item .icon {
     width: 5rem;
     height: 5rem;
+  }
+  .skills-list__title {
+    font-size: 0.875rem;
   }
   .contact__title {
     font-size: 1.25rem;
