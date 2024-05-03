@@ -418,7 +418,7 @@ a:hover, a:focus {
 .swiper-slide__media img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .swiper-slide__media:after {
   content: "";
@@ -556,7 +556,7 @@ a:hover, a:focus {
   }
   .swiper-slide__media {
     order: 2;
-    width: 100%;
+    width: 70%;
     height: auto;
   }
   .swiper-button-prev,
