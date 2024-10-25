@@ -1,22 +1,29 @@
 // Swiper Slider
-const swiper = new Swiper('.swiper', {
-    
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: 'true'
-    },
-  
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    lazy: true,
-    a11y: {
-        enabled: true
-    },
-  
-  });
+var init = false;
+var swiper;
+function swiperCard() {
+  if (window.innerWidth <= 767) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  } else if (init) {
+    swiper.disable();
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
 
 // Jump Links
 const anchors = document.querySelectorAll('a[href^="#"]');
