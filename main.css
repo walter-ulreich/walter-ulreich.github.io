@@ -172,7 +172,7 @@ a:hover, a:focus {
 .header-main__text {
   font-weight: 300;
   max-width: 720px;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 2rem auto;
   line-height: 1.75rem;
 }
 .header-main__text a {
@@ -486,7 +486,7 @@ a:hover, a:focus {
     margin: 0 1rem;
   }
   .header-main__text {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
   .section-heading {
     font-size: 1.75rem;
