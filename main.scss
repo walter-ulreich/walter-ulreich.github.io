@@ -131,21 +131,7 @@ a {
 
 /*** Header ****/ 
 .header {
-    background-image: url('images/lighthouse.jpg'); 
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-
-    &:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(0,0,0,0.7);
-    }
+    background: $color-primary; 
 }
 
 .header-top {
@@ -223,7 +209,7 @@ a {
 .header-main__text {
     font-weight: 300;
     max-width: 720px;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 2rem auto;
     line-height: 1.75rem;
 
     a {
@@ -571,7 +557,7 @@ a {
     }
 
     .header-main__text {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
     }
 
     .section-heading {
